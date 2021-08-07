@@ -2,6 +2,6 @@
     <string name="app_name">Shoe Store</string>
     <string name="email">E-mail</string>
     <string name="password">Password</string>
-    <string name="create_new_login">Create new login</string>
-    <string name="existing_user_login">Existing user login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
 </resources>
