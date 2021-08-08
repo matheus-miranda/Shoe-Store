@@ -5,4 +5,7 @@
     <string name="sign_up">Sign Up</string>
     <string name="login">Login</string>
     <string name="welcome">Welcome</string>
+    <string name="welcome_user">Welcome, %s!</string>
+    <string name="navigate_instructions">Please click below and navigate to the instructions screen</string>
+    <string name="instructions">Instructions</string>
 </resources>
