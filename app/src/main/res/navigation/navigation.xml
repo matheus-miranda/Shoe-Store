@@ -10,7 +10,7 @@
         android:id="@+id/loginFragment"
         android:name="com.udacity.shoestore.ui.LoginFragment"
         android:label="@string/login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
             app:destination="@id/welcomeFragment"
@@ -22,9 +22,20 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.udacity.shoestore.ui.WelcomeFragment"
-        android:label="@string/welcome" >
+        android:label="@string/welcome">
         <argument
             android:name="username"
             app:argType="string" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.udacity.shoestore.ui.InstructionsFragment"
+        android:label="@string/instructions" />
 </navigation>
