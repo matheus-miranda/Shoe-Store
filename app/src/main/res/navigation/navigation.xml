@@ -22,5 +22,9 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.udacity.shoestore.ui.WelcomeFragment"
-        android:label="@string/welcome" />
+        android:label="@string/welcome" >
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
 </navigation>
