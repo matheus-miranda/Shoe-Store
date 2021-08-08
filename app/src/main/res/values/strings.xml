@@ -8,4 +8,8 @@
     <string name="welcome_user">Welcome, %s!</string>
     <string name="navigate_instructions">Please click below and navigate to the instructions screen</string>
     <string name="instructions">Instructions</string>
+    <string name="shoe_list">Shoe List</string>
+    <string name="navigate_shoe_list">Please click below to navigate to the Shoe List</string>
+    <string name="instructions_add">Click the add button on the next screen to create a new shoe model</string>
+    <string name="add_button">Add button</string>
 </resources>

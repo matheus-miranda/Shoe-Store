@@ -41,12 +41,12 @@
             android:id="@+id/btn_instructions"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_spacing"
             android:layout_marginTop="@dimen/layout_double_spacing"
             android:text="@string/instructions"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/tv_instructions"
-            app:layout_constraintStart_toStartOf="@id/tv_instructions"
-            app:layout_constraintTop_toBottomOf="@+id/tv_instructions" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
