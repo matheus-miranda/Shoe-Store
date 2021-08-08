@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
+import com.udacity.shoestore.databinding.ShoeItemBinding
 
 class ShoeListFragment : Fragment() {
 
@@ -22,8 +22,15 @@ class ShoeListFragment : Fragment() {
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
 
-        viewModel.shoeList.observe(viewLifecycleOwner, Observer { shoeList ->
-            // TODO: Observe shoe list and bind to LinearLayout
+        viewModel.shoeList.observe(viewLifecycleOwner, { shoeList ->
+            for (shoe in shoeList) {
+                DataBindingUtil.inflate<ShoeItemBinding>(
+                    inflater,
+                    R.layout.shoe_item,
+                    binding.llShoeList,
+                    true
+                ).apply { this.shoe = shoe }
+            }
         })
 
         return binding.root

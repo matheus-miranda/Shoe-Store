@@ -12,6 +12,9 @@ class ShoeListViewModel : ViewModel() {
     val shoeList: LiveData<List<Shoe>> get() = _shoeList
 
     init {
+        // Add example shoe when the app starts
+        addShoe(Shoe("Air Force 1", 10.5, "Nike", "Nike Shoes"))
+        addShoe(Shoe("Nano X1", 9.0, "Rebook", "Rebook Shoes"))
         _shoeList.value = getList()
     }
 
