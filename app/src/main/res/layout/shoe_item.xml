@@ -62,7 +62,7 @@
                 android:layout_marginStart="@dimen/layout_half_spacing"
                 android:gravity="end"
                 android:maxLines="1"
-                android:text="@{@string/shoe_size(Double.toString(shoe.size))}"
+                android:text="@{@string/shoe_size(shoe.size)}"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"

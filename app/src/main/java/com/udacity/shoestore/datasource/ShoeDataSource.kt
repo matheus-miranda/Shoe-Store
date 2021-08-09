@@ -6,7 +6,7 @@ object ShoeDataSource {
 
     private val shoeList = arrayListOf<Shoe>()
 
-    fun getList() = shoeList.toList()
+    fun getList() = shoeList
 
     fun addShoe(shoe: Shoe) {
         shoeList.add(shoe)
