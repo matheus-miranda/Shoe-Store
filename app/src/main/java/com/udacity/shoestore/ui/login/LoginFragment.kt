@@ -1,4 +1,4 @@
-package com.udacity.shoestore.ui
+package com.udacity.shoestore.ui.login
 
 import android.os.Bundle
 import android.view.LayoutInflater
