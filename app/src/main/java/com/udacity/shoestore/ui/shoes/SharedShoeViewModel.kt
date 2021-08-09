@@ -1,6 +1,7 @@
 package com.udacity.shoestore.ui.shoes
 
 import android.view.View
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -22,8 +23,15 @@ class SharedShoeViewModel : ViewModel() {
     }
 
     fun addShoe(view: View, shoe: Shoe) {
-        _shoeList.value?.add(shoe)
-        view.findNavController().navigateUp()
+        shoe.let {
+            if (it.name.isBlank() || it.company.isBlank() || it.size.isBlank() || it.description.isBlank())
+                Toast.makeText(view.context, "Please fill out all the fields", Toast.LENGTH_SHORT)
+                    .show()
+            else {
+                _shoeList.value?.add(it)
+                view.findNavController().navigateUp()
+            }
+        }
     }
 
     fun onCancel(view: View) {
