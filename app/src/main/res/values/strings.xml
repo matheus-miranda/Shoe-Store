@@ -14,4 +14,9 @@
     <string name="add_button">Add button</string>
     <string name="shoe_size">Size: %s</string>
     <string name="shoe_detail">Shoe Detail</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="company">Company</string>
+    <string name="shoe_size_add">Shoe Size</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
 </resources>
