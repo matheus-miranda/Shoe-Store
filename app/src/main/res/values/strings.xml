@@ -13,4 +13,5 @@
     <string name="instructions_add">Click the add button on the next screen to create a new shoe model</string>
     <string name="add_button">Add button</string>
     <string name="shoe_size">Size: %s</string>
+    <string name="shoe_detail">Shoe Detail</string>
 </resources>
