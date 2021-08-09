@@ -25,4 +25,8 @@ class SharedShoeViewModel : ViewModel() {
         _shoeList.value?.add(shoe)
         view.findNavController().navigateUp()
     }
+
+    fun onCancel(view: View) {
+        view.findNavController().navigateUp()
+    }
 }

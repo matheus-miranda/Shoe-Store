@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="shoe"
             type="com.udacity.shoestore.model.Shoe" />
@@ -52,7 +53,7 @@
                     android:id="@+id/et_shoe_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
+                    android:inputType="text|textCapWords"
                     android:text="@={shoe.name}" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -71,7 +72,7 @@
                     android:id="@+id/et_company"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
+                    android:inputType="text|textCapSentences"
                     android:text="@={shoe.company}" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -109,7 +110,7 @@
                     android:id="@+id/et_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textMultiLine"
+                    android:inputType="textMultiLine|textCapSentences"
                     android:maxLines="4"
                     android:text="@={shoe.description}" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -119,8 +120,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/layout_double_spacing"
-                android:text="@string/save"
                 android:onClick="@{(view) -> viewModel.addShoe(view, shoe)}"
+                android:text="@string/save"
                 app:layout_constraintEnd_toEndOf="@id/til_description"
                 app:layout_constraintStart_toStartOf="@id/til_description"
                 app:layout_constraintTop_toBottomOf="@id/til_description" />
@@ -131,6 +132,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/layout_half_spacing"
+                android:onClick="@{(view) -> viewModel.onCancel(view)}"
                 android:text="@android:string/cancel"
                 app:layout_constraintEnd_toEndOf="@id/btn_save"
                 app:layout_constraintStart_toStartOf="@id/btn_save"

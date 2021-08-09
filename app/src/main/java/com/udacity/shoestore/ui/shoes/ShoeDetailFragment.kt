@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.model.Shoe
@@ -26,18 +25,6 @@ class ShoeDetailFragment : Fragment() {
         binding.viewModel = sharedShoeViewModel
         binding.shoe = Shoe("", "", "", "")
 
-        insertListeners()
-
         return binding.root
-    }
-
-    private fun insertListeners() {
-        binding.btnCancel.setOnClickListener {
-            returnToList()
-        }
-    }
-
-    private fun returnToList() {
-        findNavController().navigateUp()
     }
 }
