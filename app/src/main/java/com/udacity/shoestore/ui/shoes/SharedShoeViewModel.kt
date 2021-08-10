@@ -37,4 +37,9 @@ class SharedShoeViewModel : ViewModel() {
     fun onCancel(view: View) {
         view.findNavController().navigateUp()
     }
+
+    fun fabAddShoe(view: View) {
+        view.findNavController()
+            .navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
+    }
 }

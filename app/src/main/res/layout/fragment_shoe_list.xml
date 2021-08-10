@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.ui.shoes.SharedShoeViewModel" />
+    </data>
+
     <!-- Constraint makes it easier to align FAB -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -26,6 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/layout_spacing"
             android:contentDescription="@string/add_button"
+            android:onClick="@{(view) -> viewModel.fabAddShoe(view)}"
             android:src="@drawable/ic_add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
