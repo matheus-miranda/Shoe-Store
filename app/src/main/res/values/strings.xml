@@ -19,4 +19,5 @@
     <string name="shoe_size_add">Shoe Size</string>
     <string name="description">Description</string>
     <string name="save">Save</string>
+    <string name="logout">Logout</string>
 </resources>
