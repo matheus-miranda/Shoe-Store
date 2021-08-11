@@ -8,10 +8,10 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
-import com.udacity.shoestore.DataStorePref
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.databinding.ShoeItemBinding
+import com.udacity.shoestore.utils.DataStorePref
 import kotlinx.coroutines.launch
 
 class ShoeListFragment : Fragment() {

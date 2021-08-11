@@ -9,8 +9,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import com.udacity.shoestore.DataStorePref
-import com.udacity.shoestore.DataStorePref.Companion.KEY
+import com.udacity.shoestore.utils.DataStorePref
+import com.udacity.shoestore.utils.DataStorePref.Companion.KEY
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 import kotlinx.coroutines.launch

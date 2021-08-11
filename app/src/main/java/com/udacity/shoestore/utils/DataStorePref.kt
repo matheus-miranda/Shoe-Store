@@ -1,4 +1,4 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.utils
 
 import android.content.Context
 import androidx.datastore.core.DataStore
