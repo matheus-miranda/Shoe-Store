@@ -7,19 +7,34 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.udacity.shoestore.DataStorePref
+import com.udacity.shoestore.DataStorePref.Companion.KEY
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentLoginBinding
+import kotlinx.coroutines.launch
 
 class LoginFragment : Fragment() {
 
     private lateinit var binding: FragmentLoginBinding
+    private lateinit var dataStorePref: DataStorePref
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
+
+        // Read from DataStore to find out if user has logged in previously
+        dataStorePref = DataStorePref(requireContext())
+        viewLifecycleOwner.lifecycleScope.launch {
+            val hasLoggedIn = dataStorePref.readFromDataStore(KEY)
+            if (hasLoggedIn == true) {
+                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToShoeListFragment2())
+            }
+        }
 
         insertListeners()
         return binding.root
@@ -46,6 +61,16 @@ class LoginFragment : Fragment() {
             Toast.makeText(context, "Please fill out all the fields", Toast.LENGTH_SHORT).show()
         else
             navigateToWelcomeScreen(binding.etEmail.text.toString())
+            savaToDataStore()
+    }
+
+    /**
+     * When user enters valid login info, save to DataStore
+     */
+    private fun savaToDataStore() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            dataStorePref.savaToDataStore(KEY, true)
+        }
     }
 
     /**
