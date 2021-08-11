@@ -34,6 +34,10 @@ class SharedShoeViewModel : ViewModel() {
         }
     }
 
+    fun clearList() {
+        _shoeList.value?.clear()
+    }
+
     fun onCancel(view: View) {
         view.findNavController().navigateUp()
     }

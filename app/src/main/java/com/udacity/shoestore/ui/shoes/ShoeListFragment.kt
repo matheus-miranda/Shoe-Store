@@ -45,6 +45,7 @@ class ShoeListFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        sharedShoeViewModel.clearList() // Clear shoe list when user logs out
         return NavigationUI.onNavDestinationSelected(
             item,
             requireView().findNavController()
