@@ -54,7 +54,7 @@ class ShoeListFragment : Fragment() {
 
         // When user logs out, save the value to the DataStore
         viewLifecycleOwner.lifecycleScope.launch {
-            dataStorePref.savaToDataStore(DataStorePref.KEY, false)
+            dataStorePref.saveToDataStore(DataStorePref.KEY, false)
         }
 
         return NavigationUI.onNavDestinationSelected(

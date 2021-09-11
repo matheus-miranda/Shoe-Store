@@ -13,7 +13,7 @@ class DataStorePref(private val context: Context) {
     /**
      * Sava to DataStore when user first logs in
      */
-    suspend fun savaToDataStore(key: String, hasLoggedIn: Boolean) {
+    suspend fun saveToDataStore(key: String, hasLoggedIn: Boolean) {
         val dataStoreKey = booleanPreferencesKey(key)
         context.dataStore.edit { settings ->
             settings[dataStoreKey] = hasLoggedIn

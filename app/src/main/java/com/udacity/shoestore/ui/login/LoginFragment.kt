@@ -9,10 +9,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import com.udacity.shoestore.utils.DataStorePref
-import com.udacity.shoestore.utils.DataStorePref.Companion.KEY
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentLoginBinding
+import com.udacity.shoestore.utils.DataStorePref
+import com.udacity.shoestore.utils.DataStorePref.Companion.KEY
 import kotlinx.coroutines.launch
 
 class LoginFragment : Fragment() {
@@ -69,7 +69,7 @@ class LoginFragment : Fragment() {
      */
     private fun savaToDataStore() {
         viewLifecycleOwner.lifecycleScope.launch {
-            dataStorePref.savaToDataStore(KEY, true)
+            dataStorePref.saveToDataStore(KEY, true)
         }
     }
 
